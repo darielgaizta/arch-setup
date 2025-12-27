@@ -1,0 +1,113 @@
+* {
+    border: none;
+    font-family: FontAwesome, Montserrat;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    color: #e4eeee;
+}
+
+tooltip {
+    border: 2px solid #181825;
+    background-color: #1b1111;
+}
+
+#clock,
+#workspaces,
+#idle_inhibitor,
+#tray,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#battery,
+#custom-media {
+    padding: 0.25em 0.5em;
+    margin: 5px 5px;
+    margin-bottom: 0px;
+    border: 1px solid #181825;
+    background-color: #1b1111;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+#idle_inhibitor {
+    border-radius: 0.5em 0 0 0.5em;
+    margin-right: 0px;
+    color: #f0b092;
+    font-size: 1.5em;
+    padding: 0px 0.5em;
+}
+
+#clock, #tray, #workspaces {
+    border-radius: 0.5em;
+    color: #f09292;
+}
+
+#clock {
+    margin-left: 10px;
+    margin-right: 0px;
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+#workspaces {
+    padding: 2px 0px;
+    margin-left: 0px;
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+#workspaces button {
+    color: #92f0e0;
+    padding: 0px 0.5em;
+    margin: 0px 2.5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#workspaces button:hover {
+    background-color: #e4eeee;
+    color: #1b1111;
+}
+
+#workspaces button.active {
+    background-color: #f09292;
+    color: #1b1111;
+}
+
+#battery {
+    border-radius: 0 0.5em 0.5em 0;
+    margin-left: 0px;
+    margin-right: 10px;
+    color: #f0b092;
+}
+
+#custom-media {
+    border-radius: 0.5em;
+    color: #f2f2f2;
+}
+
+#cpu,
+#memory,
+#temperature,
+#pulseaudio {
+    border-radius: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#cpu {
+    color: #f0b092;
+}
+
+#memory {
+    color: #f0b092;
+}
+
+#temperature {
+    color: #f2f2f2;
+}
+
+#pulseaudio {
+    color: #92f0e0;
+}

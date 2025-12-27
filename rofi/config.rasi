@@ -1,0 +1,67 @@
+configuration {
+	modes: [ combi ];
+	combi-modes: [window, drun, run];
+	drun-display-format: "{icon} {name}";
+	font: "Montserrat 14";
+	show-icons: true;
+	icon-theme: "Colloid-Red-Dark";
+}
+
+@theme "/dev/null/"
+
+* {
+	bg: #ff8080aa;
+	bg-alt: #8c4545aa;
+	fg: #93c9b0;
+	fg-alt: #425c50;
+}
+
+window, entry {
+	padding: 1em;
+	border-radius: 1%;
+}
+
+window, mainbox, listview {
+	background-color: #dddddd00;
+}
+mainbox {
+	border-radius: 1% 10% 1% 1%;
+	background-color: #ffffff00;
+}
+
+
+inputbar {
+	children: [entry];
+}
+
+entry {
+	placeholder: "Type here...";
+}
+
+/*** Elements ***/
+
+listview {
+	lines: 8;
+}
+
+element {
+	border-radius: 1%;
+	orientation: horizontal;
+	children: [element-icon, element-text];
+	spacing: 0px;
+}
+
+element-icon {
+	size: 1.5em;
+	padding: 0.4em;
+}
+
+element-text {
+	vertical-align: 0.5;
+}
+
+element.selected,
+element-text.selected,
+element-icon.selected {
+	background-color: @bg;
+}
