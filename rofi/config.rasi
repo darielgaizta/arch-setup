@@ -2,7 +2,7 @@ configuration {
 	modes: [ combi ];
 	combi-modes: [window, drun, run];
 	drun-display-format: "{icon} {name}";
-	font: "Montserrat 14";
+	font: "Montserrat 11";
 	show-icons: true;
 	icon-theme: "Colloid-Red-Dark";
 }
@@ -10,58 +10,95 @@ configuration {
 @theme "/dev/null/"
 
 * {
-	bg: #ff8080aa;
-	bg-alt: #8c4545aa;
-	fg: #93c9b0;
-	fg-alt: #425c50;
+	red: #f09292ff;
+	lime: #f0b092ff;
+	teal: #92f0e0ff;
+	white: #d2d2d2ff;
+	black: #1b111199;
+
+	padding: 0.2em;
 }
 
-window, entry {
-	padding: 1em;
-	border-radius: 1%;
-}
-
-window, mainbox, listview {
-	background-color: #dddddd00;
-}
-mainbox {
-	border-radius: 1% 10% 1% 1%;
+window {
+	width: 55%;
+	padding: 0;
 	background-color: #ffffff00;
 }
 
+mainbox {
+	background-color: @black;
+	border-radius: 0 8.8% 0 8.1%;
+	border: 0.2em;
+	border-color: @red;
+	padding: 0.5em;
+	children: [searchbox, listbox];
+	orientation: horizontal;
+	spacing: 0;
+}
+
+searchbox {
+	children: [inputbar, imagebox];
+	border-radius: 0 0 0 7.5%;
+	padding: 0;
+}
+
+listbox {
+	children: [listview];
+	background-color: #ffffff00;
+	border-radius: 0 8% 0 0;
+	padding: 0;
+}
+
+imagebox {
+	background-color: @lime;
+	background-image: url("~/Pictures/Internet/Power-Cute-2.png", width);
+}
 
 inputbar {
 	children: [entry];
+	border-radius: 0.2em;
+	padding: 0;
 }
 
 entry {
-	placeholder: "Type here...";
+	padding: 0.4em;
+	border-radius: 0.5em;
+	color: grey;
+	placeholder: "Search applications here... ✶⋆.˚";
 }
 
 /*** Elements ***/
 
 listview {
 	lines: 8;
+	padding: 0.2em 0 0.2em 0.2em;
+	background-color: @red;
+	children: [box, element];
 }
 
 element {
-	border-radius: 1%;
-	orientation: horizontal;
-	children: [element-icon, element-text];
-	spacing: 0px;
+	background-color: @red;
+	border-radius: 0.4em 0 0 0.4em;
+	padding: 0.2em 0 0.2em 0.2em;
+	spacing: 0;
 }
 
 element-icon {
-	size: 1.5em;
-	padding: 0.4em;
+	border-radius: 0.4em 0 0 0.4em;
+	size: 1.2em;
+	background-color: #fff;
 }
 
 element-text {
 	vertical-align: 0.5;
+	background-color: #fff;
 }
 
-element.selected,
+element.selected {
+	background-color: #c57878dd;
+}
+
 element-text.selected,
 element-icon.selected {
-	background-color: @bg;
+	background-color: #ffffff00;
 }

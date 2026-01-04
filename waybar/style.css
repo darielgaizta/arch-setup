@@ -79,7 +79,7 @@ tooltip {
     border-radius: 0 0.5em 0.5em 0;
     margin-left: 0px;
     margin-right: 10px;
-    color: #f0b092;
+    color: #f09292;
 }
 
 #custom-media {
@@ -97,15 +97,15 @@ tooltip {
 }
 
 #cpu {
-    color: #f0b092;
+    color: #f09292;
 }
 
 #memory {
-    color: #f0b092;
+    color: #f09292;
 }
 
 #temperature {
-    color: #f2f2f2;
+    color: #f09292;
 }
 
 #pulseaudio {
